@@ -19,7 +19,6 @@
 - 객체 생성 패턴: instantiation을 다른 객체에게 delegate(위임)한다.
 
 
-
 ### 생성패턴의 핵심
 
 1. 시스템이 어떤 concrete(구체) 클래스를 사용하는지 캡슐화함.
@@ -256,7 +255,12 @@ def main():
     - schedule = director로 job(builder를 리턴)?
     - job = Schedule.every 메쏘드에 의해 보통 생성 및 리턴됨. (=builder?)
     - job.do = 콜되면 단계를 거쳐 생성된 job이 최종적으로 scheduler에 등록됨
-  - django ORM
+  - django ORM chaining
+  ```python
+  Post.objects.filter(published_date__lte=timezone.now()) \
+                .order_by('published_date') \
+                .exclude(body_text__icontains="food")
+  ```
 - [Real-world examples of the Builder pattern](https://stackoverflow.com/questions/5211039/real-world-examples-of-the-builder-pattern): 자바 코드
 
 
