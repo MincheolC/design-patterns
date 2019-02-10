@@ -258,8 +258,8 @@ def main():
   - django ORM chaining
   ```python
   Post.objects.filter(published_date__lte=timezone.now()) \
-                .order_by('published_date') \
-                .exclude(body_text__icontains="food")
+              .order_by('published_date') \
+              .exclude(body_text__icontains="food")
   ```
 - [Real-world examples of the Builder pattern](https://stackoverflow.com/questions/5211039/real-world-examples-of-the-builder-pattern): 자바 코드
 
