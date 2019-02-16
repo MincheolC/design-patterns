@@ -5,7 +5,7 @@ from room import Room, RoomWithABomb
 from wall import Wall, BombedWall
 
 
-class MazeGame:
+class MazeGameFactory:
     @classmethod
     def make_maze(cls):
         return Maze()
@@ -44,7 +44,7 @@ class MazeGame:
         return a_maze
 
 
-class BombedMazeGame(MazeGame):
+class BombedMazeGameFactory(MazeGameFactory):
     @classmethod
     def make_wall(cls):
         return BombedWall()
@@ -55,10 +55,10 @@ class BombedMazeGame(MazeGame):
 
 
 if __name__ == "__main__":
-    game = MazeGame()
+    game = MazeGameFactory()
     created_maze = game.create_maze()
 
     """ factory method를 사용하면, 다른 create_maze 함수(client에서 실제로 호출하는
     인터페이스 역할)을 변경할 필요없이 다양한 MazeGame을 생성할 수 있다. """
-    game_with_bombed_maze = BombedMazeGame()
+    game_with_bombed_maze = BombedMazeGameFactory()
     created_bombed_maze = game_with_bombed_maze.create_maze()
