@@ -1,3 +1,4 @@
+import copy
 import abc
 
 
@@ -7,3 +8,9 @@ class MapSite:
     @abc.abstractmethod
     def enter():
         raise NotImplementedError
+
+    def clone(self):
+        """ prototype에서 사용. 추상메소드로 구현하고 subclass 에서
+            override하게도 할 수 있으나 귀찮아서...ㅎㅎ
+        """
+        return copy.deepcopy(self)

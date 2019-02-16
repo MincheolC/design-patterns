@@ -1,3 +1,6 @@
+import copy
+
+
 class Maze:
     def __init__(self):
         self._rooms = {}
@@ -7,3 +10,6 @@ class Maze:
 
     def room_no(self, room_number):
         return self._rooms[room_number]
+
+    def clone(self):
+        return copy.deepcopy(self)

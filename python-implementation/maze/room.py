@@ -3,7 +3,7 @@ from direction import Direction
 
 
 class Room(MapSite):
-    def __init__(self, room_number):
+    def __init__(self, room_number=0):
         super().__init__()
         self._sides = {
             Direction.NORTH: None,
@@ -24,12 +24,15 @@ class Room(MapSite):
     def enter():
         pass
 
+    def initialize(self, room_no):
+        self._room_number = room_no
+
     def __repr__(self):
         return f"normal room {self._room_number}"
 
 
 class RoomWithABomb(Room):
-    def __init__(self, room_number):
+    def __init__(self, room_number=0):
         super().__init__(room_number)
 
     def __repr__(self):
