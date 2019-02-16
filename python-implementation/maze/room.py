@@ -23,3 +23,14 @@ class Room(MapSite):
 
     def enter():
         pass
+
+    def __repr__(self):
+        return f"normal room {self._room_number}"
+
+
+class RoomWithABomb(Room):
+    def __init__(self, room_number):
+        super().__init__(room_number)
+
+    def __repr__(self):
+        return f"room with a bomb {self._room_number}"
