@@ -58,5 +58,7 @@ if __name__ == "__main__":
     game = MazeGame()
     created_maze = game.create_maze()
 
+    """ factory method를 사용하면, 다른 create_maze 함수(client에서 실제로 호출하는
+    인터페이스 역할)을 변경할 필요없이 다양한 MazeGame을 생성할 수 있다. """
     game_with_bombed_maze = BombedMazeGame()
     created_bombed_maze = game_with_bombed_maze.create_maze()
