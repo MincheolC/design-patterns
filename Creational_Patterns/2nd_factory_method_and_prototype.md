@@ -22,7 +22,7 @@
 
 ### 예제코드
 ##### 1. 추상 클래스 정의 예제
-- [추상 클래스 코드](https://github.com/Hyunhoo-Kwon/DesignPatterens/blob/master/src/main/java/chapter03/factorymethod/MazeGame.java)
+- [추상 클래스 코드](https://github.com/betterdevstomorrow/DesignPatterens/blob/master/src/main/java/chapter03/factorymethod/MazeGame.java)
 ```
 public abstract class MazeGame {
     public Maze createMaze() {
@@ -34,7 +34,7 @@ public abstract class MazeGame {
     public abstract Door makeDoor(Room r1, Room r2);
 ```
 
-- [서브클래스 코드](https://github.com/Hyunhoo-Kwon/DesignPatterens/blob/master/src/main/java/chapter03/factorymethod/EnchantedMazeGame.java)
+- [서브클래스 코드](https://github.com/betterdevstomorrow/DesignPatterens/blob/master/src/main/java/chapter03/factorymethod/EnchantedMazeGame.java)
 ```
 public class EnchantedMazeGame extends MazeGame {
     // 팩토리 메서드들
@@ -53,7 +53,7 @@ public class EnchantedMazeGame extends MazeGame {
 }
 ```
 
-- [호출 테스트 코드](https://github.com/Hyunhoo-Kwon/DesignPatterens/blob/master/src/test/java/chapter03/factorymethod/MazeGameTest.java)
+- [호출 테스트 코드](https://github.com/betterdevstomorrow/DesignPatterens/blob/master/src/test/java/chapter03/factorymethod/MazeGameTest.java)
 ```
 @Test
 public void createEnchantedMaze() throws Exception {
