@@ -92,6 +92,13 @@ public static void main(String[] args) {
 ### 참고
  - [Design Patterns Tutorial - Factory Pattern](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
 
+ - [Design patterns: (Abstract) Factory 코드와 설명](http://pythoninthepink.blogspot.com/2013/05/abstract-factory-code.html)
+
+ - [django 테스트 픽스처 생성 라이브러리](https://github.com/FactoryBoy/factory_boy)
+
+  *"...As a fixtures replacement tool, it aims to replace static, hard to maintain fixtures with easy-to-use factories for complex object...."*
+
+
 
 ## 원형 (Prototype)
 
@@ -141,6 +148,13 @@ public class Door extends MapSite {
  - [Python Design Patterns Tutorial - Prototype](https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_prototype.htm)
  - [Java Prototype Pattern](https://blog.seotory.com/post/2015/09/java-prototype-pattern)
 
+ - [PyPattyrn - A simple library for implementing common design patterns.](https://github.com/tylerlaberge/PyPattyrn#prototype-pattern)
+
+ - [Creational Design Patterns in Python](http://www.informit.com/articles/article.aspx?p=2131418&seqNum=4) & [stackoverflow 답](https://stackoverflow.com/questions/17610275/prototype-pattern-in-python)
+
+ - [Prototypes을 관리하는 클래스를 별도로 생성하는 방법](https://github.com/faif/python-patterns/blob/master/patterns/creational/prototype.py)
+
+ - [Are there any design patterns that are unnecessary in dynamic languages like Python?](https://softwareengineering.stackexchange.com/questions/157943/are-there-any-design-patterns-that-are-unnecessary-in-dynamic-languages-like-pyt)
 
 ---
 
