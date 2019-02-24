@@ -12,6 +12,7 @@
 ### 활용
 - 클래스의 인스턴스가 오직 하나여야 함을 보장하고 잘 정의된 access point로 모든 사용자가 접근할 수 있도록 해야할 때
 - 유일한 인스턴스가 서브클래싱으로 확장되어야 하며, 사용자는 확장된 서브클래스의 인스턴스를 사용할 수 있어야 할 때
+  - 싱클톤 클래스의 서브클래스 싱클톤A, 싱클톤B의 총 인스턴스 개수를 관리.
 
 ### 구조
 Instance()과 같은 연산을 정의하여, 유일하게 인스턴스로 접근할 수 있게 함.
@@ -22,7 +23,7 @@ Instance()과 같은 연산을 정의하여, 유일하게 인스턴스로 접근
 - Singleton 클래스 자체가 인스턴스를 캡슐화하여 인스턴스로의 접근을 통제함.
 - 전역 변수를 사용하여 발생하는 문제점을 없앰. 
 - 연산 및 표현의 정제를 허용함 (상속 가능)
-- 인스턴스의 개수를 변경하기가 자유로움.
+- 인스턴스의 개수를 변경하기가 자유로움. (싱글톤을 더 이상 사용하고 싶지 않을 때 가능)
 - 클래스 연산(static method)을 사용하는 것보다 훨씬 유연한 방법임. (서브 클래스들이 오버라이트 가능)
 
 ### 구현
@@ -63,14 +64,16 @@ private MazeFactory Lookup(String mazeStyle) {
 ```
 
 ### 단점
-- 객체들 간의 결합도를 높여 수정이나 테스트가 어려워질 수 있음 
-- 숨겨진 의존성을 만듬. 참조가 투명하지 않아 추적하기가 힘듬(?)
+- 싱글톤 클래스가 많은 의존성을 가지게 되면 객체들 간의 결합도를 높여 수정이나 테스트가 어려워질 수 있음 
+- 숨겨진 의존성을 만들고 참조가 투명하지 않아 추적하기가 힘듬
 
 ### 참고
-- [Singleton Pattern](https://medium.freecodecamp.org/singleton-design-pattern-pros-and-cons-e10f98e23d63)
-- [Singleton - JS](https://medium.com/@dmnsgn/singleton-pattern-in-es6-d2d021d150ae)
-- [Singleton - Java](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples)
-- [Singleton - Python](https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_singleton.htm)
+- [Singleton Pattern Pros and Cons](https://medium.freecodecamp.org/singleton-design-pattern-pros-and-cons-e10f98e23d63)
+- [Singleton in ES6](https://medium.com/@dmnsgn/singleton-pattern-in-es6-d2d021d150ae)
+- [Singleton Best Practice in Java](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples)
+- [Singleton Lazy Initialization in Java](https://javaplant.tistory.com/21)
+- [Singleton in Python](https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_singleton.htm)
+- [그림] GoF의 디자인 패턴
 
 # 4장: Structural Patterns
 
@@ -123,7 +126,7 @@ private MazeFactory Lookup(String mazeStyle) {
 ##### 객체 적응자
 - Adaptee 클래스의 행동을 재정의하기가 매우 어려움.
 
-### 고려할 사항(?)
+### 고려할 사항
 ##### 대체 가능 적응자 (pluggable adapter)
 클래스의 재사용성을 높이려면, 누가 이 클래스를 사용할지에 대한 생각을 최소화할 것.
 - 다른 인터페이스를 원하는 사용자가 있다면, 인터페이스 개조를 담당하는 대체 가능 적응자 사용.
@@ -138,9 +141,10 @@ a. 추상 연산 사용
 b. 위임 객체 사용
 c. 매개변수화된 적응자를 사용
 
-### 참고
+### 참조
  - [Adapter Pattern  - Java](https://blog.seotory.com/post/2017/09/java-adapter-pattern)
  - [Adpater Pattern (Class - Java)](https://niceman.tistory.com/141)
+ - [그림] GoF의 디자인 패턴
 
 ---
 
