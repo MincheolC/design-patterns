@@ -36,7 +36,6 @@ class EnchantedMazeFactorySingleton(MazeFactorySingleton):
 
 if __name__ == "__main__":
     enchanted_maze_factory_singleton = EnchantedMazeFactorySingleton.instance()
-    print("asdasdasdasdasdasd")
     MazeFactorySingleton.register("EnchantedMazeFactory", enchanted_maze_factory_singleton)
     maze_factory_singleton = MazeFactorySingleton.instance()
     assert (enchanted_maze_factory_singleton == maze_factory_singleton)
