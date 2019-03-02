@@ -37,3 +37,12 @@ class RoomWithABomb(Room):
 
     def __repr__(self):
         return f"room with a bomb {self._room_number}"
+
+
+class EnchantedRoom(Room):
+    def __init__(self, room_number=0, spell=""):
+        super().__init__(room_number)
+        self._spell = spell
+
+    def __repr__(self):
+        return f"enchanted room {self._room_number}"
