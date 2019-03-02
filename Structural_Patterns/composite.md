@@ -24,7 +24,7 @@ Client는 Component 클래스 인터페이스를 사용.
 - 자식사이의 순서가 있을 경우 자식에게 접근, 관리하는 인터페이스를 설계할때 주의해야함!
 - leaf클래스에게 add나 remove 호출하지 않도록 해야함
 
-[Composite Example - equipment](http://)
+[Composite Example - equipment](https://github.com/betterdevstomorrow/design-patterns/tree/master/Structural_Patterns/composite-example/equipment)
 
 0. 호출 (component, composite equipment의 구분없이 price()호출)
  ```java
