@@ -27,7 +27,7 @@ Abstraction 클래스가 사용자 요청을 Implementor 객체에 전달
 ### 구현
 한 한드폰에 1개의 SimplePay만 들어간다고 합시다^.^
 
-[Bridge Example - simplepay](http://)
+[Bridge Example - simplepay](https://github.com/betterdevstomorrow/design-patterns/tree/master/Structural_Patterns/bridge-example)
 
 ![bridge_ex_my](images/bridge_ex.png)
 
