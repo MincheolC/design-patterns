@@ -17,6 +17,7 @@ Client는 Component 클래스 인터페이스를 사용.
 ### 활용
 - 부분-전체의 객체 계통을 표현하고 싶을때
 - 사용자가 객체의 합성으로 생긴 복합 객체(Composite)와 개개의 객체(Leaf) 사이의 차이를 알지 않고도 자기 일을 할 수 있도록 만들고 싶을때
+	- ex) file system (folder: composite / file: leaf)
 
 ![composite_ex](images/composite_ex1.jpg)
 
