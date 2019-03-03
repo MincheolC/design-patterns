@@ -181,6 +181,7 @@ public class IPhoneSimplePayImpl implements SimplePayImpl {
 ### 참고
 - [Bridge Pattern Example1 - shape and draw api](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
 - [Bridge Pattern Example2 - os and continent](https://blog.naver.com/drifterz303/90194293283)
+- [Bridge Pattern Example3(python) A/B test ] https://www.giacomodebidda.com/bridge-pattern-in-python/
 
 ---
 
