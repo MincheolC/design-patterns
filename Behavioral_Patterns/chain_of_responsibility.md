@@ -31,5 +31,74 @@
 - Client: ConcreteHandler 객체에게 필요한 요청을 보낸다
 > 사용자는 처리를 요청하고, 이 처리 요청은 실제로 그 요청을 받을 책임이 있는 ConcreteHandler 객체를 만날 때까지 정의된 연결 고리를 따라서 계속 전달된다
 
+### 예제코드 (Ref. https://www.journaldev.com/1617/chain-of-responsibility-design-pattern-in-java)
+- Handler: DispenseChain
+```
+public interface DispenseChain {
+	void setNextChain(DispenseChain nextChain);
+	void dispense(Currency cur);
+}
+```
+
+- ConcreteHandler: Dollar50Dispenser, Dollar20Dispenser, Dollar10Dispenser
+```
+public class Dollar50Dispenser implements DispenseChain {
+	private DispenseChain chain;
+	
+	@Override
+	public void setNextChain(DispenseChain nextChain) {
+		this.chain=nextChain;
+	}
+
+	@Override
+	public void dispense(Currency cur) {
+		if(cur.getAmount() >= 50){
+			int num = cur.getAmount()/50;
+			int remainder = cur.getAmount() % 50;
+			System.out.println("Dispensing "+num+" 50$ note");
+			if(remainder !=0) this.chain.dispense(new Currency(remainder));
+		}else{
+			this.chain.dispense(cur);
+		}
+	}
+}
+```
+
+- Client
+```
+public class ATMDispenseChain {
+
+	private DispenseChain c1;
+
+	public ATMDispenseChain() {
+		// initialize the chain
+		this.c1 = new Dollar50Dispenser();
+		DispenseChain c2 = new Dollar20Dispenser();
+		DispenseChain c3 = new Dollar10Dispenser();
+
+		// set the chain of responsibility
+		c1.setNextChain(c2);
+		c2.setNextChain(c3);
+	}
+
+	public static void main(String[] args) {
+		ATMDispenseChain atmDispenser = new ATMDispenseChain();
+		while (true) {
+			int amount = 0;
+			System.out.println("Enter amount to dispense");
+			Scanner input = new Scanner(System.in);
+			amount = input.nextInt();
+			if (amount % 10 != 0) {
+				System.out.println("Amount should be in multiple of 10s.");
+				return;
+			}
+			// process the request
+			atmDispenser.c1.dispense(new Currency(amount));
+		}
+	}
+}
+```
+
 ### 참고
 - https://www.journaldev.com/1617/chain-of-responsibility-design-pattern-in-java
+
