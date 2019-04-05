@@ -10,7 +10,7 @@
 
 간단한 예: ListIterator를 인스턴스화 하기 위해서는 List가 필요 → coupled!
 
-[](images/iterator1.png)
+![](images/iterator1.png)
 
 Decoupling을 위해 *polymorphic iteration* 을 제공하도록 iterator를 일반화 할 수 있다.
 
@@ -20,7 +20,7 @@ Decoupling을 위해 *polymorphic iteration* 을 제공하도록 iterator를 일
 - 복합 객체의 다양한 순회 방법을 제공하고 싶을 때
 - polymorphic iteration: 즉 다양한 복합체를 순회하는 하나의 인터페이스를 만들고 싶을 때
 
-[](images/iterator2.png)
+![](images/iterator2.png)
 
 - Iterator: 요소를 접근하고 순회하는데 필요한 인터페이스 제공.
 - ConcreteIterator: Iterator 에 정의된 인터페이스를 구현하는 클래스로서 순회 과정 중에 집합 객체 내의 현재 위치를 기억한다.

@@ -53,7 +53,7 @@ Interpreter 패턴은 2번 Advanced User를 위한 패턴이다. 왜냐하면, I
 
 ### 구조
 
-[Interpretor](images/interpreter.png)
+![Interpretor](images/interpreter.png)
 
 - AbstractExpression: 추상 구문 트리에 속한 모든 노드에 해당하는 클래스들이 공통으
 로 가져야 할 Interpret() 오퍼레이션을 추상 오퍼레이션으로 정의한다.
