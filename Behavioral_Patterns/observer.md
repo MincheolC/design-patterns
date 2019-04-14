@@ -7,6 +7,7 @@
 ### 구조
 ![observer](images/observer.png)
 ![observer2](images/observer2.png)
+
 - Subject: Observer 객체를 붙이거나 떼는 데 필요한 인터페이스를 제공한다.
 - Observer: 주체에 생긴 변화에 관심 있는 객체를 갱신하는 데 필요한 인터페이스를 정의한다.
 - ConcreteSubject: ConcreteObserver객체에게 알려주어야 하는 상태를 저장하고 상태가 변경될 때 감시자에게 변경을 통보한다.
@@ -59,7 +60,8 @@ public abstract class Subject {
 	private int basicVar;
 	public abstract void notifyObservers();
 
-	public void TemplateMethod(int newValue) {
+	//데이터를 변경할 때 templateMethod를 호출하여 사용한다.
+	public void templateMethod(int newValue) {
 		changeBasicVar(newValue);
 		changeMyInstVar(newValue);
 		notifyObservers();
@@ -77,9 +79,6 @@ public abstract class Subject {
 ### 참고
 - JAVA api Observable을 사용할 경우 Observer들을 관리하는게 vector로 되어있는데, synchronization이 문제가 되지 않는다면 ArrayList를 직접 호출하여 쓰는게 더 빠르다
 
-
-### 단점
-- Observer ->  Subject의 정보를 서로서로 변경시킬수 있어서 서로다른 observer객체에 의해 반복수행될 수 있다
   
 ## 관련 패턴
 - `Mediator` 패턴은 서로 복잡한 관계로 얽혀 있을때 중앙 집중 형태로 묶어주고 `Observer` 패턴은 객체들간의 의존 관계를 분산 시켜준다..
