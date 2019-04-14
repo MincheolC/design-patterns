@@ -31,7 +31,3 @@
 
 ### 관련 패턴
 - Concrete State 내부에 데이터 멤버가 없다면(= 각 상태별로 항상 동일하다) `Flyweight` 패턴이나 `Singleton` 패턴을 활용할 수있다.
-
-
-### 참고
-> [Observer Pattern in the Spring Framework] https://springframework.guru/gang-of-four-design-patterns/observer-pattern/
