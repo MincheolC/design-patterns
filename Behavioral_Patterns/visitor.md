@@ -8,7 +8,7 @@
 
 ![Visitor](https://www.baeldung.com/wp-content/uploads/2018/06/Visitor-UML.png)
 
-* Visitor: '동작'을 선언한 인터페이스. ConcreteElement마다 실행할 동작을 오버라이딩해 선언해야 함.
+* Visitor: '동작'을 선언한 인터페이스. ConcreteElement마다 실행할 동작을 오버로딩해 선언해야 함.
 * Element: '구조'를 선언한 인터페이스. 내부에서 Visitor를 호출하는 인터페이스를 선언해야 함.
 * ObjectStructure: Element 인터페이스를 관리하기 위한 클래스. 복합체 패턴으로 관리할 수도 있고, 단순 리스트로 관리할 수도 있음.
 
