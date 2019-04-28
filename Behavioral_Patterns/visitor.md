@@ -155,6 +155,7 @@ public class Main {
 
 * 복합체(Composite)
 * 해석자(Interpreter)
+* 가교(Bridge)
 
 ### 참고
 
